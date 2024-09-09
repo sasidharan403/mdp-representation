@@ -1,63 +1,61 @@
 # MDP REPRESENTATION
 
 ## AIM:
-The representation of real world scenario using Markov Decision Process by stating all the states,actions and environment with respective rewards.
+To represent any one real-world problem in MDP form.
 
 ## PROBLEM STATEMENT:
-To develop a game which will promote to other level,when the agent complete its task correctly.
+To develop a game application the role of the agent is to promote if the level is cleared or depromote if the game is loss
+
 ### Problem Description
-If the agent unable to complete the given task,then there is no promotion to other level,when it reaches the final level,it will recieve a reward.
+
 
 ### State Space
-{L1,L2,L3}--->{0,1,2}
+{A1,A2,A3}--> {0,1,2}
+A1--> LEVEL 1
+A2--> LEVEL 2 
+A3--> LEVEL 3
+
 ### Sample State
-L1--->{0}
+A1--> 0 --> LEVEL 1
 
 ### Action Space
-Moving Left(1)
-
-Stay in the same level(0)
+{W,L}-->{0,1}
+W-->True
+L-->False
 
 ### Sample Action
-Stay in the same level(0)
+W--> 0 --> True
 
 ### Reward Function
-+1(When it reaches the goal state or final level)
+R = { +1 , if we come closer to the winning
+       0 , if not
 
 ### Graphical Representation
-![image](https://github.com/user-attachments/assets/1530363d-7e3c-4843-9221-4f363143adde)
-
+![rllnn](https://github.com/user-attachments/assets/fc83f34f-9d73-4dc3-be81-79c59740c45b)
 
 
 ## PYTHON REPRESENTATION:
-~~~
-NAME : A.sasidharan
-REG NO : 212221240049
-
+```
 P = {
     0:{
-        0: [(0.44,0,0,True),(0.13,1,0,False)],
-        1: [(0.13,1,0,False),(0.44,0,0,True)]
+        0: [(0.77,0,0,True),(0.23,1,0,False)],
+        1: [(0.23,1,0,False),(0.77,0,0,True)]
     },
     1:{
-        0: [(0.44,1,0,False),(0.13,2,1,True)],
-        1: [(0.13,2,1,True),(0.44,1,0,False)]
+        0: [(0.77,1,0,False),(0.23,2,1,True)],
+        1: [(0.23,2,1,True),(0.77,1,0,False)]
     },
     2:{
-        0: [(0.44,2,1,True),(0.13,1,1,False)],
-        1: [(0.13,1,1,False),(0.44,2,1,True)]
+        0: [(0.77,2,1,True),(0.23,1,1,False)],
+        1: [(0.23,1,1,False),(0.77,2,1,True)]
     }
 }
-
-
-~~~
+```
 
 ## OUTPUT:
-![image](https://github.com/user-attachments/assets/e59fea22-9c8a-4a64-9a80-501a859af230)
-
-
-
+![image](https://github.com/user-attachments/assets/7de4f369-9398-4534-846b-d7b3c5175ce5)
 
 
 ## RESULT:
-Therefore an MDP representation has been created for a real world scenario with all the states, actions and rewards.
+Thus the given real world problem is successfully represented in a MDP form .
+
